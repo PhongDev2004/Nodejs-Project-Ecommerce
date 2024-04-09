@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
-import User from "../models/User";
+import User from "../models/user.js";
 dotenv.config();
 
 const { SECRET_CODE } = process.env;
