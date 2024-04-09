@@ -4,6 +4,7 @@ info:
   description: API for managing products and user authentication in the store
   version: 1.0.0
 servers:
+  - url: https://nodejs-project-ecommerce.onrender.com/
   - url: http://localhost:8000/api
 paths:
   /products:
