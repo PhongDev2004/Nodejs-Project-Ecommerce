@@ -3,19 +3,19 @@ import { productValid } from "../validation/product.js";
 
 export const getList = async (req, res) => {
   try {
-    // const {
-    //   _page = 1,
-    //   _limit = 10,
-    //   _sort = "createdAt",
-    //   _order = "asc",
-    // } = req.query;
-    // const options = {
-    //   page: _page,
-    //   limit: _limit,
-    //   sort: {
-    //     [_sort]: _order === "asc" ? 1 : -1,
-    //   },
-    // };
+    const {
+      _page = 1,
+      _limit = 10,
+      _sort = "createdAt",
+      _order = "asc",
+    } = req.query;
+    const options = {
+      page: _page,
+      limit: _limit,
+      sort: {
+        [_sort]: _order === "asc" ? 1 : -1,
+      },
+    };
 
     const data = await Product.find().populate("category");
     if (!data || data.length === 0) {
