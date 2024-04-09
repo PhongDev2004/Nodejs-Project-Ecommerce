@@ -1,6 +1,6 @@
 import User from "../models/user.js";
 import bcryptjs from "bcryptjs";
-import { signInValidator, signUpValidator } from "../validation/user";
+import { signInValidator, signUpValidator } from "../validation/user.js";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 dotenv.config();
