@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import YAML from "js-yaml";
 import swaggerUi from "swagger-ui-express";
-// import router from "./routes/index.js";
+import router from "./routes/index.js";
 import path from "path";
 import { fileURLToPath } from "url";
 import { readFile } from "fs/promises";
@@ -50,7 +50,7 @@ connect(URI_DB)
     console.log("Connect DB failed!", err);
   });
 
-// app.use("/api", router);
+app.use("/api", router);
 
 app.listen(PORT, () => {
   console.log(`Project running port ${PORT}`);
